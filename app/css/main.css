@@ -629,9 +629,10 @@ ul
 {
     display: inline-block;
 
-    width: 30%; 
-    margin: 0;
+    width: 100%; 
     padding: 0;
+
+    background: #52c8ff;
 }
 
 li
@@ -655,7 +656,8 @@ li
 {
     margin-top: 50px;
 
-    border: 1px solid black;
+    border: 1px solid black; 
+    background: #aca5ff;
 }
 
 .content-wrapper
@@ -665,5 +667,15 @@ li
     display: inline-block;
     float: right; 
 
-    width: 70%;
+    width: 65%;
+}
+
+.list-wrapper
+{
+    display: inline-block; 
+
+    width: 30%;
+    height: 700px;
+
+    background: #52c8ff;
 }
