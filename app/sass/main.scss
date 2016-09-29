@@ -1,0 +1,103 @@
+@import "normalize";
+$TheFirstMainColorBlue: #52c8ff;
+$TheSecondMainColor:#ff82d6;
+
+
+@mixin centerer {
+  position: absolute;
+  top: 40%;
+  left: 35%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin text($width) {
+  float: left;
+  display: inline-block;
+  width:$width;
+  padding: 5%;
+}
+
+.main-wrapper{
+ padding: 5%;
+  width: 1000px;
+  margin: auto;
+}
+
+div.block-outer{
+  display: inline-block;
+  float: left;
+  width: 100px;
+  height: 100px;
+  margin-left: 5%;
+  background: $TheFirstMainColorBlue;
+  .block-inner{
+    @extend .block-outer;
+    transform:rotate(45deg);
+  }
+}
+.logo{
+  @include centerer();
+  transform:rotate(-45deg);
+}
+.text-logo{
+  padding-top: 3%;
+  width: 70%;
+  margin: auto;
+  font-size: 2.7em;
+  display: inline-block;
+    text-align: right;
+}
+
+
+.main-table{
+  margin-top: 10%;
+  width: 100%;
+  border: 1px solid black;
+  height: 100%;
+}
+ul{
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  width: 25%;
+}
+li{
+  list-style-type:none;
+  display: block;
+  border: 1px solid black;
+  height: 75px;
+  text-align: left;
+  line-height: 3em;
+  cursor: pointer;
+  font-size: 1.5em;
+}
+
+@for $z from 1 through 3{
+  .content-block-#{$z}{
+    float: right;
+    width: 75%;
+    height: 100%;
+    background: cornflowerblue;
+  }
+}
+@for $i from 1 through 2{
+  .the-#{$i}-row{
+    @include text(40%);
+  }
+}
+@for $i from 3 through 5{
+  .the-#{$i}-row{
+    @include text(20%);
+  }
+}
+@for $i from 6 through 7{
+  .the-#{$i}-row{
+    @include text(40%);
+  }
+}
+
+
+
+//.first-row-first-text{
+//  @include text();
+//}
