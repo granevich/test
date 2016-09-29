@@ -1,4 +1,5 @@
 @import "normalize";
+@import "grid";
 $TheFirstMainColorBlue: #52c8ff;
 $TheSecondMainColor:#ff82d6;
 
@@ -10,17 +11,10 @@ $TheSecondMainColor:#ff82d6;
   transform: translate(-50%, -50%);
 }
 
-@mixin text($width) {
-  float: left;
-  display: inline-block;
-  width:$width;
-  padding: 5%;
-}
 
 .main-wrapper{
- padding: 5%;
-  width: 1000px;
   margin: auto;
+  width: 1000px;
 }
 
 div.block-outer{
@@ -51,7 +45,7 @@ div.block-outer{
 
 .main-table{
   margin-top: 10%;
-  width: 100%;
+  width: 30%;
   border: 1px solid black;
   height: 100%;
 }
@@ -59,9 +53,11 @@ ul{
   display: inline-block;
   padding: 0;
   margin: 0;
-  width: 25%;
+  width: 30%;
+
 }
 li{
+
   list-style-type:none;
   display: block;
   border: 1px solid black;
@@ -71,33 +67,15 @@ li{
   cursor: pointer;
   font-size: 1.5em;
 }
-
-@for $z from 1 through 3{
-  .content-block-#{$z}{
-    float: right;
-    width: 75%;
-    height: 100%;
-    background: cornflowerblue;
-  }
-}
-@for $i from 1 through 2{
-  .the-#{$i}-row{
-    @include text(40%);
-  }
-}
-@for $i from 3 through 5{
-  .the-#{$i}-row{
-    @include text(20%);
-  }
-}
-@for $i from 6 through 7{
-  .the-#{$i}-row{
-    @include text(40%);
-  }
+.content-table{
+  margin-top: 50px;
+  border: 1px solid black;
 }
 
+.content-wrapper{
+  font-size: 1.1em;
+  display: inline-block;
+  width: 70%;
+  float: right;
+}
 
-
-//.first-row-first-text{
-//  @include text();
-//}
