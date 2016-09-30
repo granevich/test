@@ -564,6 +564,11 @@ th
     width: 100%;
 }
 
+html
+{
+    padding: 5%;
+}
+
 .main-wrapper
 {
     width: 1000px; 
@@ -629,7 +634,8 @@ ul
 {
     display: inline-block;
 
-    width: 100%; 
+    width: 100%;
+    margin: 0; 
     padding: 0;
 
     background: #52c8ff;
@@ -668,6 +674,8 @@ li
     float: right; 
 
     width: 65%;
+    margin-top: 20px;
+    margin-right: 20px;
 }
 
 .list-wrapper
