@@ -1,0 +1,10 @@
+/node_modules
+
+
+/app/libs
+.idea
+/bower_components
+.bowerrc
+
+
+

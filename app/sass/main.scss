@@ -38,6 +38,7 @@ div.block-outer{
   transform:rotate(-45deg);
 }
 .text-logo{
+  position: relative;
   padding-top: 3%;
   width: 70%;
   margin: auto;
@@ -59,12 +60,19 @@ ul{
   padding: 0;
   width: 100%;
   margin: 0;
+  :first-child{
+    border: none;
+  };
+  :last-child{
+    border-bottom:1px solid black ;
+  }
 
 }
 li{
   list-style-type:none;
   display: block;
-  border: 1px solid black;
+  border-top:1px solid black;
+  border-right: 1px solid black;
   height: 75px;
   text-align: left;
   line-height: 3em;
@@ -72,16 +80,22 @@ li{
   font-size: 1.5em;
 }
 .content-table{
+  position: relative;
   background: $TheSecondMainColor;
   margin-top: 50px;
-  border: 1px solid black;
+  border: 2px solid black;
+}
+.active{
+  display: inline-block !important;
 }
 
 .content-wrapper{
+
+  color:black;
   margin-top: 20px;
   margin-right: 20px;
   font-size: 1.1em;
-  display: inline-block;
+  display: none;
   width: 65%;
   float: right;
 }
